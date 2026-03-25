@@ -53,17 +53,17 @@ namespace ActividadIIIDBWinForm
 
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Abrirformulario(new Clientes());
+            
         }
 
         private void categoriasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Abrirformulario(new Categorias());
+            
         }
 
         private void proveedoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Abrirformulario(new Proveedor());
+            
         }
     }
 }

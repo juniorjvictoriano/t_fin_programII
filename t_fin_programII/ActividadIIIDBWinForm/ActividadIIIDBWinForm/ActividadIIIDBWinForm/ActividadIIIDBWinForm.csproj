@@ -62,18 +62,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Categorias.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Categorias.Designer.cs">
-      <DependentUpon>Categorias.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Clientes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Clientes.Designer.cs">
-      <DependentUpon>Clientes.cs</DependentUpon>
-    </Compile>
     <Compile Include="Modelo\Categorias.cs">
       <DependentUpon>ModelCliente.tt</DependentUpon>
     </Compile>
@@ -127,19 +115,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Proveedor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Proveedor.Designer.cs">
-      <DependentUpon>Proveedor.cs</DependentUpon>
-    </Compile>
     <Compile Include="VentasContext.cs" />
-    <EmbeddedResource Include="Categorias.resx">
-      <DependentUpon>Categorias.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Clientes.resx">
-      <DependentUpon>Clientes.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Productos.resx">
       <DependentUpon>Productos.cs</DependentUpon>
     </EmbeddedResource>
@@ -156,9 +132,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Proveedor.resx">
-      <DependentUpon>Proveedor.cs</DependentUpon>
-    </EmbeddedResource>
     <EntityDeploy Include="Modelo\ModelCliente.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ModelCliente.Designer.cs</LastGenOutput>
@@ -181,9 +154,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="BaseDatos_Script\SQLProveedor.sql" />
-    <Content Include="BaseDatos_Script\SQLCategorias.sql" />
-    <Content Include="BaseDatos_Script\SQLClientes.sql" />
     <Content Include="BaseDatos_Script\SQLVentas.sql" />
     <Content Include="Modelo\ModelCliente.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

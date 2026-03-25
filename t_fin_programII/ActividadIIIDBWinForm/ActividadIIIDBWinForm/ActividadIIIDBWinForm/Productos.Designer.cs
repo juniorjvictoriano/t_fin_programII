@@ -71,14 +71,15 @@
             // 
             // btnCargar
             // 
+            this.btnCargar.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnCargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCargar.Location = new System.Drawing.Point(821, 17);
+            this.btnCargar.Location = new System.Drawing.Point(817, 17);
             this.btnCargar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCargar.Name = "btnCargar";
             this.btnCargar.Size = new System.Drawing.Size(53, 25);
             this.btnCargar.TabIndex = 0;
             this.btnCargar.Text = "Cargar";
-            this.btnCargar.UseVisualStyleBackColor = true;
+            this.btnCargar.UseVisualStyleBackColor = false;
             this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
             // dgProductos
@@ -185,6 +186,7 @@
             // 
             // btnAgregar
             // 
+            this.btnAgregar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.Location = new System.Drawing.Point(156, 126);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
@@ -192,7 +194,7 @@
             this.btnAgregar.Size = new System.Drawing.Size(142, 27);
             this.btnAgregar.TabIndex = 12;
             this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // txtID
@@ -233,7 +235,7 @@
             this.groupBox1.Size = new System.Drawing.Size(319, 200);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Insertar Productos";
+            this.groupBox1.Text = "Insertar productos";
             // 
             // groupBox2
             // 
@@ -247,10 +249,11 @@
             this.groupBox2.Size = new System.Drawing.Size(242, 200);
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Eliminar";
+            this.groupBox2.Text = "Eliminar producto";
             // 
             // btnEliminar
             // 
+            this.btnEliminar.BackColor = System.Drawing.Color.Red;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Location = new System.Drawing.Point(11, 62);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
@@ -258,7 +261,7 @@
             this.btnEliminar.Size = new System.Drawing.Size(226, 23);
             this.btnEliminar.TabIndex = 13;
             this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // groupBox3
@@ -283,7 +286,7 @@
             this.groupBox3.Size = new System.Drawing.Size(310, 200);
             this.groupBox3.TabIndex = 16;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Actualizar";
+            this.groupBox3.Text = "Actualizar producto";
             // 
             // txtIDActualizar
             // 
@@ -333,14 +336,15 @@
             // 
             // btnActualizar
             // 
+            this.btnActualizar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActualizar.Location = new System.Drawing.Point(160, 168);
+            this.btnActualizar.Location = new System.Drawing.Point(160, 165);
             this.btnActualizar.Margin = new System.Windows.Forms.Padding(2);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(142, 27);
             this.btnActualizar.TabIndex = 12;
             this.btnActualizar.Text = "Actualizar";
-            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.UseVisualStyleBackColor = false;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // txtDescripcionActualizado
@@ -418,13 +422,13 @@
             this.groupBox4.Size = new System.Drawing.Size(879, 206);
             this.groupBox4.TabIndex = 17;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Mostrar";
+            this.groupBox4.Text = "Productos en almacén";
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.SeaGreen;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(741, 18);
+            this.button1.Location = new System.Drawing.Point(737, 18);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
