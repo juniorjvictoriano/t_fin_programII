@@ -65,5 +65,11 @@ namespace ActividadIIIDBWinForm
         {
             
         }
+
+        private void acercaDeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Info frm = new Info();
+            frm.Show();
+        }
     }
 }

@@ -117,4 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Mi nombre es Junior José Victoriano Velos, con matrícula SD-2023-06077. 
+Actualmente curso la asignatura de Lenguaje de Programación II, en la cual busco 
+fortalecer mis competencias en el desarrollo de software, profundizando en 
+conceptos avanzados de programación, estructuras de datos y buenas 
+prácticas en la construcción de aplicaciones.</value>
+  </data>
 </root>
