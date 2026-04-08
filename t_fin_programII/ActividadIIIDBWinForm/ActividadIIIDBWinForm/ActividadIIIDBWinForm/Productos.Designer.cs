@@ -73,10 +73,10 @@
             // 
             this.btnCargar.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnCargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCargar.Location = new System.Drawing.Point(817, 17);
+            this.btnCargar.Location = new System.Drawing.Point(817, 18);
             this.btnCargar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Size = new System.Drawing.Size(53, 25);
+            this.btnCargar.Size = new System.Drawing.Size(53, 23);
             this.btnCargar.TabIndex = 0;
             this.btnCargar.Text = "Cargar";
             this.btnCargar.UseVisualStyleBackColor = false;
@@ -250,6 +250,7 @@
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Eliminar producto";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // btnEliminar
             // 
