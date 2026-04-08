@@ -74,7 +74,7 @@
             // 
             this.btnCargar.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnCargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCargar.Location = new System.Drawing.Point(817, 18);
+            this.btnCargar.Location = new System.Drawing.Point(800, 18);
             this.btnCargar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCargar.Name = "btnCargar";
             this.btnCargar.Size = new System.Drawing.Size(53, 23);
@@ -91,7 +91,7 @@
             this.dgProductos.Name = "dgProductos";
             this.dgProductos.RowHeadersWidth = 51;
             this.dgProductos.RowTemplate.Height = 24;
-            this.dgProductos.Size = new System.Drawing.Size(863, 152);
+            this.dgProductos.Size = new System.Drawing.Size(846, 152);
             this.dgProductos.TabIndex = 1;
             // 
             // label1
@@ -200,16 +200,16 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(8, 35);
+            this.txtID.Location = new System.Drawing.Point(8, 37);
             this.txtID.Margin = new System.Windows.Forms.Padding(2);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(227, 20);
+            this.txtID.Size = new System.Drawing.Size(205, 20);
             this.txtID.TabIndex = 14;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(8, 20);
+            this.label6.Location = new System.Drawing.Point(8, 22);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(18, 13);
@@ -259,7 +259,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(242, 208);
+            this.groupBox2.Size = new System.Drawing.Size(224, 208);
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Eliminar producto";
@@ -269,10 +269,10 @@
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.Red;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Location = new System.Drawing.Point(8, 59);
+            this.btnEliminar.Location = new System.Drawing.Point(8, 61);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(226, 23);
+            this.btnEliminar.Size = new System.Drawing.Size(205, 23);
             this.btnEliminar.TabIndex = 13;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -293,7 +293,7 @@
             this.groupBox3.Controls.Add(this.txtStockActualizado);
             this.groupBox3.Controls.Add(this.cmbCategoriaActualizado);
             this.groupBox3.Controls.Add(this.label11);
-            this.groupBox3.Location = new System.Drawing.Point(578, 10);
+            this.groupBox3.Location = new System.Drawing.Point(561, 10);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
@@ -304,7 +304,7 @@
             // 
             // txtIDActualizar
             // 
-            this.txtIDActualizar.Location = new System.Drawing.Point(7, 35);
+            this.txtIDActualizar.Location = new System.Drawing.Point(7, 36);
             this.txtIDActualizar.Margin = new System.Windows.Forms.Padding(2);
             this.txtIDActualizar.Name = "txtIDActualizar";
             this.txtIDActualizar.Size = new System.Drawing.Size(295, 20);
@@ -313,7 +313,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(5, 19);
+            this.label12.Location = new System.Drawing.Point(5, 20);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(18, 13);
@@ -323,7 +323,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(7, 68);
+            this.label7.Location = new System.Drawing.Point(7, 69);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(44, 13);
@@ -332,7 +332,7 @@
             // 
             // txtNombreActualizado
             // 
-            this.txtNombreActualizado.Location = new System.Drawing.Point(7, 84);
+            this.txtNombreActualizado.Location = new System.Drawing.Point(7, 85);
             this.txtNombreActualizado.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombreActualizado.Name = "txtNombreActualizado";
             this.txtNombreActualizado.Size = new System.Drawing.Size(140, 20);
@@ -341,7 +341,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(7, 115);
+            this.label8.Location = new System.Drawing.Point(7, 116);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(63, 13);
@@ -352,7 +352,7 @@
             // 
             this.btnActualizar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActualizar.Location = new System.Drawing.Point(160, 169);
+            this.btnActualizar.Location = new System.Drawing.Point(160, 170);
             this.btnActualizar.Margin = new System.Windows.Forms.Padding(2);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(142, 27);
@@ -363,7 +363,7 @@
             // 
             // txtDescripcionActualizado
             // 
-            this.txtDescripcionActualizado.Location = new System.Drawing.Point(7, 130);
+            this.txtDescripcionActualizado.Location = new System.Drawing.Point(7, 131);
             this.txtDescripcionActualizado.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescripcionActualizado.Name = "txtDescripcionActualizado";
             this.txtDescripcionActualizado.Size = new System.Drawing.Size(140, 20);
@@ -371,7 +371,7 @@
             // 
             // txtPrecioActualizado
             // 
-            this.txtPrecioActualizado.Location = new System.Drawing.Point(159, 130);
+            this.txtPrecioActualizado.Location = new System.Drawing.Point(159, 131);
             this.txtPrecioActualizado.Margin = new System.Windows.Forms.Padding(2);
             this.txtPrecioActualizado.Name = "txtPrecioActualizado";
             this.txtPrecioActualizado.Size = new System.Drawing.Size(143, 20);
@@ -380,7 +380,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(7, 161);
+            this.label9.Location = new System.Drawing.Point(7, 162);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(35, 13);
@@ -390,7 +390,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(159, 115);
+            this.label10.Location = new System.Drawing.Point(159, 116);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(37, 13);
@@ -399,7 +399,7 @@
             // 
             // txtStockActualizado
             // 
-            this.txtStockActualizado.Location = new System.Drawing.Point(7, 176);
+            this.txtStockActualizado.Location = new System.Drawing.Point(7, 177);
             this.txtStockActualizado.Margin = new System.Windows.Forms.Padding(2);
             this.txtStockActualizado.Name = "txtStockActualizado";
             this.txtStockActualizado.Size = new System.Drawing.Size(140, 20);
@@ -408,7 +408,7 @@
             // cmbCategoriaActualizado
             // 
             this.cmbCategoriaActualizado.FormattingEnabled = true;
-            this.cmbCategoriaActualizado.Location = new System.Drawing.Point(159, 81);
+            this.cmbCategoriaActualizado.Location = new System.Drawing.Point(159, 82);
             this.cmbCategoriaActualizado.Margin = new System.Windows.Forms.Padding(2);
             this.cmbCategoriaActualizado.Name = "cmbCategoriaActualizado";
             this.cmbCategoriaActualizado.Size = new System.Drawing.Size(143, 21);
@@ -417,7 +417,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(157, 66);
+            this.label11.Location = new System.Drawing.Point(157, 67);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(52, 13);
@@ -433,7 +433,7 @@
             this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox4.Size = new System.Drawing.Size(879, 206);
+            this.groupBox4.Size = new System.Drawing.Size(862, 206);
             this.groupBox4.TabIndex = 17;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Productos en almacén";
@@ -442,7 +442,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.SeaGreen;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(737, 18);
+            this.button1.Location = new System.Drawing.Point(720, 18);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
@@ -455,7 +455,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(897, 442);
+            this.ClientSize = new System.Drawing.Size(881, 442);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
