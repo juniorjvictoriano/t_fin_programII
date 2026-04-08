@@ -195,10 +195,10 @@
             // 
             this.btnAgregar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar.Location = new System.Drawing.Point(163, 126);
+            this.btnAgregar.Location = new System.Drawing.Point(163, 130);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(68, 27);
+            this.btnAgregar.Size = new System.Drawing.Size(68, 23);
             this.btnAgregar.TabIndex = 12;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
@@ -249,9 +249,9 @@
             // button2
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(236, 126);
+            this.button2.Location = new System.Drawing.Point(236, 130);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(68, 27);
+            this.button2.Size = new System.Drawing.Size(68, 23);
             this.button2.TabIndex = 13;
             this.button2.Text = "Limpiar";
             this.button2.UseVisualStyleBackColor = true;
@@ -276,10 +276,10 @@
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.Red;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Location = new System.Drawing.Point(144, 61);
+            this.btnEliminar.Location = new System.Drawing.Point(144, 62);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(68, 27);
+            this.btnEliminar.Size = new System.Drawing.Size(68, 23);
             this.btnEliminar.TabIndex = 13;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -361,10 +361,10 @@
             // 
             this.btnActualizar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActualizar.Location = new System.Drawing.Point(160, 170);
+            this.btnActualizar.Location = new System.Drawing.Point(160, 173);
             this.btnActualizar.Margin = new System.Windows.Forms.Padding(2);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(142, 27);
+            this.btnActualizar.Size = new System.Drawing.Size(142, 23);
             this.btnActualizar.TabIndex = 12;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = false;
