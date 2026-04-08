@@ -381,5 +381,18 @@ namespace ActividadIIIDBWinForm
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            txtNombre.Clear();
+            txtDescripcion.Clear();
+            txtPrecio.Clear();
+            txtStock.Clear();
+
+            if (cmbCategoria.Items.Count > 0)
+                cmbCategoria.SelectedIndex = 0;
+
+            txtNombre.Focus();
+        }
     }
 }
