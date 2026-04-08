@@ -1,4 +1,4 @@
-﻿using ActividadIIIDBWinForm.Modelo; // namespace correcto del modelo auto-generado
+﻿using ActividadIIIDBWinForm.Modelo;
 using System;
 using System.Data;
 using System.Data.SqlClient;
@@ -10,7 +10,6 @@ namespace ActividadIIIDBWinForm
 {
     public partial class Productos : Form
     {
-
         private SQLClientesEntities _context;
         private string connectionString;
 
@@ -52,11 +51,11 @@ namespace ActividadIIIDBWinForm
             }
             return true;
         }
+
         private void CargarDatos()
         {
             try
             {
-                // Categorias es propiedad de navegación virtual en Productos.cs del modelo
                 var lista = _context.Productos
                     .Select(p => new
                     {
@@ -65,7 +64,7 @@ namespace ActividadIIIDBWinForm
                         Descripcion = p.Descripcion,
                         Precio = p.Precio,
                         Stock = p.Stock,
-                        Categoria = p.Categorias.NombreCategoria  // navegación virtual
+                        Categoria = p.Categorias.NombreCategoria
                     })
                     .ToList();
 
@@ -82,7 +81,6 @@ namespace ActividadIIIDBWinForm
         {
             try
             {
-                // CategoriaID y NombreCategoria — propiedades reales de Categorias.cs
                 var categorias = _context.Categorias
                     .Select(c => new
                     {
@@ -95,7 +93,6 @@ namespace ActividadIIIDBWinForm
                 cmbCategoria.DisplayMember = "Nombre";
                 cmbCategoria.ValueMember = "ID";
 
-                // .ToList() crea una lista independiente para evitar conflicto de binding
                 cmbCategoriaActualizado.DataSource = categorias.ToList();
                 cmbCategoriaActualizado.DisplayMember = "Nombre";
                 cmbCategoriaActualizado.ValueMember = "ID";
@@ -109,7 +106,7 @@ namespace ActividadIIIDBWinForm
 
         private void Productos_Load(object sender, EventArgs e)
         {
-            _context = new SQLClientesEntities(); // usa "name=SQLClientesEntities" del App.config
+            _context = new SQLClientesEntities();
             CargarCmbCategorias();
             CargarDatos();
         }
@@ -120,7 +117,6 @@ namespace ActividadIIIDBWinForm
         {
             if (!ValidarTexto(txtNombre.Text, "Nombre")) return;
             if (!ValidarTexto(txtDescripcion.Text, "Descripción")) return;
-
             if (!TryParseInt(txtStock.Text, "Stock", out int stock)) return;
             if (!TryParseDecimal(txtPrecio.Text, "Precio", out decimal precio)) return;
 
@@ -131,14 +127,25 @@ namespace ActividadIIIDBWinForm
                 return;
             }
 
+            string nombreNormalizado = txtNombre.Text.Trim();
+            bool existe = _context.Productos
+                .Any(p => p.NombreProducto.ToLower() == nombreNormalizado.ToLower());
+
+            if (existe)
+            {
+                MessageBox.Show($"Ya existe un producto con el nombre '{nombreNormalizado}'.",
+                    "Nombre duplicado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             try
             {
                 var nuevo = new ActividadIIIDBWinForm.Modelo.Productos
                 {
-                    NombreProducto = txtNombre.Text.Trim(),
+                    NombreProducto = nombreNormalizado,
                     Descripcion = txtDescripcion.Text.Trim(),
                     Stock = stock,
-                    CategoriaID = (int?)Convert.ToInt32(cmbCategoria.SelectedValue), // Nullable<int>
+                    CategoriaID = (int?)Convert.ToInt32(cmbCategoria.SelectedValue),
                     Precio = precio
                 };
 
@@ -172,7 +179,6 @@ namespace ActividadIIIDBWinForm
 
             try
             {
-                // ProductoID — propiedad real confirmada en Productos.cs del modelo
                 var producto = _context.Productos
                     .FirstOrDefault(p => p.ProductoID == productoID);
 
@@ -202,10 +208,8 @@ namespace ActividadIIIDBWinForm
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             if (!TryParseInt(txtIDActualizar.Text, "ID", out int productoID)) return;
-
             if (!ValidarTexto(txtNombreActualizado.Text, "Nombre")) return;
             if (!ValidarTexto(txtDescripcionActualizado.Text, "Descripción")) return;
-
             if (!TryParseInt(txtStockActualizado.Text, "Stock", out int stock)) return;
             if (!TryParseDecimal(txtPrecioActualizado.Text, "Precio", out decimal precio)) return;
 
@@ -213,6 +217,18 @@ namespace ActividadIIIDBWinForm
             {
                 MessageBox.Show("Seleccione una categoría válida.", "Validación",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string nombreNormalizado = txtNombreActualizado.Text.Trim();
+            bool existe = _context.Productos
+                .Any(p => p.NombreProducto.ToLower() == nombreNormalizado.ToLower()
+                       && p.ProductoID != productoID);
+
+            if (existe)
+            {
+                MessageBox.Show($"Ya existe otro producto con el nombre '{nombreNormalizado}'.",
+                    "Nombre duplicado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -228,11 +244,10 @@ namespace ActividadIIIDBWinForm
                     return;
                 }
 
-                // EF rastrea el objeto — solo modificamos propiedades y SaveChanges genera el UPDATE
-                producto.NombreProducto = txtNombreActualizado.Text.Trim();
+                producto.NombreProducto = nombreNormalizado;
                 producto.Descripcion = txtDescripcionActualizado.Text.Trim();
                 producto.Stock = stock;
-                producto.CategoriaID = (int?)Convert.ToInt32(cmbCategoriaActualizado.SelectedValue); // Nullable<int>
+                producto.CategoriaID = (int?)Convert.ToInt32(cmbCategoriaActualizado.SelectedValue);
                 producto.Precio = precio;
 
                 int filas = _context.SaveChanges();
@@ -249,6 +264,7 @@ namespace ActividadIIIDBWinForm
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         protected override void OnFormClosed(FormClosedEventArgs e)
         {
             _context?.Dispose();
@@ -271,10 +287,8 @@ namespace ActividadIIIDBWinForm
             {
                 try
                 {
-                    // Obtener la cadena de conexión desde el contexto de Entity Framework
                     string connectionString = _context.Database.Connection.ConnectionString;
 
-                    // Consulta para exportar productos (más relevante para tu formulario de productos)
                     string query = @"
                 SELECT 
                     p.ProductoID,
@@ -306,7 +320,6 @@ namespace ActividadIIIDBWinForm
 
                     using (StreamWriter sw = new StreamWriter(saveFileDialog.FileName, false, System.Text.Encoding.UTF8))
                     {
-                        // Escribir encabezados
                         for (int i = 0; i < dt.Columns.Count; i++)
                         {
                             sw.Write(dt.Columns[i].ColumnName);
@@ -315,15 +328,12 @@ namespace ActividadIIIDBWinForm
                         }
                         sw.WriteLine();
 
-                        // Escribir datos
                         foreach (DataRow row in dt.Rows)
                         {
                             for (int i = 0; i < dt.Columns.Count; i++)
                             {
-                                // Manejar valores nulos y caracteres especiales para CSV
                                 string valor = row[i]?.ToString() ?? "";
 
-                                // Si el valor contiene comas o comillas, encapsular entre comillas
                                 if (valor.Contains(",") || valor.Contains("\"") || valor.Contains("\n"))
                                 {
                                     valor = valor.Replace("\"", "\"\"");
