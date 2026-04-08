@@ -107,6 +107,7 @@
             // 
             // txtNombre
             // 
+            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNombre.Location = new System.Drawing.Point(11, 41);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
@@ -115,6 +116,7 @@
             // 
             // txtDescripcion
             // 
+            this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDescripcion.Location = new System.Drawing.Point(11, 87);
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescripcion.Name = "txtDescripcion";
@@ -133,6 +135,7 @@
             // 
             // txtStock
             // 
+            this.txtStock.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtStock.Location = new System.Drawing.Point(11, 133);
             this.txtStock.Margin = new System.Windows.Forms.Padding(2);
             this.txtStock.Name = "txtStock";
@@ -161,8 +164,9 @@
             // 
             // cmbCategoria
             // 
+            this.cmbCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbCategoria.FormattingEnabled = true;
-            this.cmbCategoria.Location = new System.Drawing.Point(163, 38);
+            this.cmbCategoria.Location = new System.Drawing.Point(163, 40);
             this.cmbCategoria.Margin = new System.Windows.Forms.Padding(2);
             this.cmbCategoria.Name = "cmbCategoria";
             this.cmbCategoria.Size = new System.Drawing.Size(143, 21);
@@ -170,6 +174,7 @@
             // 
             // txtPrecio
             // 
+            this.txtPrecio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPrecio.Location = new System.Drawing.Point(163, 87);
             this.txtPrecio.Margin = new System.Windows.Forms.Padding(2);
             this.txtPrecio.Name = "txtPrecio";
@@ -201,6 +206,7 @@
             // 
             // txtID
             // 
+            this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtID.Location = new System.Drawing.Point(8, 37);
             this.txtID.Margin = new System.Windows.Forms.Padding(2);
             this.txtID.Name = "txtID";
@@ -305,6 +311,7 @@
             // 
             // txtIDActualizar
             // 
+            this.txtIDActualizar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtIDActualizar.Location = new System.Drawing.Point(7, 36);
             this.txtIDActualizar.Margin = new System.Windows.Forms.Padding(2);
             this.txtIDActualizar.Name = "txtIDActualizar";
@@ -333,6 +340,7 @@
             // 
             // txtNombreActualizado
             // 
+            this.txtNombreActualizado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNombreActualizado.Location = new System.Drawing.Point(7, 85);
             this.txtNombreActualizado.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombreActualizado.Name = "txtNombreActualizado";
@@ -364,6 +372,7 @@
             // 
             // txtDescripcionActualizado
             // 
+            this.txtDescripcionActualizado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDescripcionActualizado.Location = new System.Drawing.Point(7, 131);
             this.txtDescripcionActualizado.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescripcionActualizado.Name = "txtDescripcionActualizado";
@@ -372,6 +381,7 @@
             // 
             // txtPrecioActualizado
             // 
+            this.txtPrecioActualizado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPrecioActualizado.Location = new System.Drawing.Point(159, 131);
             this.txtPrecioActualizado.Margin = new System.Windows.Forms.Padding(2);
             this.txtPrecioActualizado.Name = "txtPrecioActualizado";
@@ -400,6 +410,7 @@
             // 
             // txtStockActualizado
             // 
+            this.txtStockActualizado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtStockActualizado.Location = new System.Drawing.Point(7, 177);
             this.txtStockActualizado.Margin = new System.Windows.Forms.Padding(2);
             this.txtStockActualizado.Name = "txtStockActualizado";
@@ -408,8 +419,9 @@
             // 
             // cmbCategoriaActualizado
             // 
+            this.cmbCategoriaActualizado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbCategoriaActualizado.FormattingEnabled = true;
-            this.cmbCategoriaActualizado.Location = new System.Drawing.Point(159, 82);
+            this.cmbCategoriaActualizado.Location = new System.Drawing.Point(159, 84);
             this.cmbCategoriaActualizado.Margin = new System.Windows.Forms.Padding(2);
             this.cmbCategoriaActualizado.Name = "cmbCategoriaActualizado";
             this.cmbCategoriaActualizado.Size = new System.Drawing.Size(143, 21);
@@ -442,7 +454,8 @@
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.textBox1.BackColor = System.Drawing.SystemColors.Menu;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Location = new System.Drawing.Point(7, 18);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(193, 20);
