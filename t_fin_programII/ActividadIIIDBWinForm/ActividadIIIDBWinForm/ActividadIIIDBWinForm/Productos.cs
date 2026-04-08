@@ -110,11 +110,11 @@ namespace ActividadIIIDBWinForm
             CargarCmbCategorias();
             CargarDatos();
 
-            textBox1.Text = "Filtrar por producto...";
+            textBox1.Text = "⌕ Filtrar por producto...";
             textBox1.ForeColor = System.Drawing.Color.Gray;
             textBox1.GotFocus += (s, ev) =>
             {
-                if (textBox1.Text == "Filtrar por producto...")
+                if (textBox1.Text == "⌕ Filtrar por producto...")
                 {
                     textBox1.Text = "";
                     textBox1.ForeColor = System.Drawing.Color.Black;
@@ -124,7 +124,7 @@ namespace ActividadIIIDBWinForm
             {
                 if (string.IsNullOrWhiteSpace(textBox1.Text))
                 {
-                    textBox1.Text = "Filtrar por producto...";
+                    textBox1.Text = "⌕ Filtrar por producto...";
                     textBox1.ForeColor = System.Drawing.Color.Gray;
                 }
             };
