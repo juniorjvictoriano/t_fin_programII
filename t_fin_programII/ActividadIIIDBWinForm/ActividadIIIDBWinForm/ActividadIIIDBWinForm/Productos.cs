@@ -109,6 +109,25 @@ namespace ActividadIIIDBWinForm
             _context = new SQLClientesEntities();
             CargarCmbCategorias();
             CargarDatos();
+
+            textBox1.Text = "Filtrar por producto...";
+            textBox1.ForeColor = System.Drawing.Color.Gray;
+            textBox1.GotFocus += (s, ev) =>
+            {
+                if (textBox1.Text == "Filtrar por producto...")
+                {
+                    textBox1.Text = "";
+                    textBox1.ForeColor = System.Drawing.Color.Black;
+                }
+            };
+            textBox1.LostFocus += (s, ev) =>
+            {
+                if (string.IsNullOrWhiteSpace(textBox1.Text))
+                {
+                    textBox1.Text = "Filtrar por producto...";
+                    textBox1.ForeColor = System.Drawing.Color.Gray;
+                }
+            };
         }
 
         private void btnCargar_Click(object sender, EventArgs e) => CargarDatos();
@@ -169,7 +188,6 @@ namespace ActividadIIIDBWinForm
         {
             if (!TryParseInt(txtID.Text, "ID", out int productoID)) return;
 
-            // Verificar si el producto tiene facturas asociadas antes de intentar eliminar
             bool tieneFacturas = _context.DetallesFactura
                 .Any(df => df.ProductoID == productoID);
 
@@ -215,7 +233,6 @@ namespace ActividadIIIDBWinForm
             }
             catch (Exception ex)
             {
-                // Exponer el inner exception para diagnóstico real
                 string detalle = ex.InnerException?.Message ?? ex.Message;
                 MessageBox.Show($"Error al eliminar producto:\n{detalle}", "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -398,6 +415,9 @@ namespace ActividadIIIDBWinForm
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             string filtro = textBox1.Text.Trim().ToLower();
+
+            // Ignorar el texto del placeholder
+            if (filtro == "filtrar por producto...") filtro = "";
 
             try
             {
