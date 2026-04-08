@@ -394,5 +394,45 @@ namespace ActividadIIIDBWinForm
 
             txtNombre.Focus();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            string filtro = textBox1.Text.Trim().ToLower();
+
+            try
+            {
+                var lista = _context.Productos
+                    .Select(p => new
+                    {
+                        ID = p.ProductoID,
+                        Nombre = p.NombreProducto,
+                        Descripcion = p.Descripcion,
+                        Precio = p.Precio,
+                        Stock = p.Stock,
+                        Categoria = p.Categorias.NombreCategoria
+                    })
+                    .ToList();
+
+                if (!string.IsNullOrWhiteSpace(filtro))
+                {
+                    lista = lista
+                        .Where(p =>
+                            p.Nombre.ToLower().Contains(filtro) ||
+                            p.Descripcion.ToLower().Contains(filtro) ||
+                            p.Categoria.ToLower().Contains(filtro) ||
+                            p.Precio.ToString().Contains(filtro) ||
+                            p.Stock.ToString().Contains(filtro) ||
+                            p.ID.ToString().Contains(filtro))
+                        .ToList();
+                }
+
+                dgProductos.DataSource = lista;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al filtrar productos:\n{ex.Message}", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
