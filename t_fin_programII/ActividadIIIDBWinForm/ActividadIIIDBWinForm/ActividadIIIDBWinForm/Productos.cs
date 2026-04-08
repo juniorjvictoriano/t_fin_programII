@@ -169,6 +169,21 @@ namespace ActividadIIIDBWinForm
         {
             if (!TryParseInt(txtID.Text, "ID", out int productoID)) return;
 
+            // Verificar si el producto tiene facturas asociadas antes de intentar eliminar
+            bool tieneFacturas = _context.DetallesFactura
+                .Any(df => df.ProductoID == productoID);
+
+            if (tieneFacturas)
+            {
+                MessageBox.Show(
+                    $"No se puede eliminar el producto con ID {productoID} porque tiene registros en facturas asociados.\n\n" +
+                    "Debe eliminar primero los detalles de factura relacionados, o desactivar el producto en su lugar.",
+                    "Eliminación bloqueada",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+                return;
+            }
+
             var confirm = MessageBox.Show(
                 $"¿Deseas eliminar el producto con ID {productoID}?",
                 "Confirmar eliminación",
@@ -200,7 +215,9 @@ namespace ActividadIIIDBWinForm
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error al eliminar producto:\n{ex.Message}", "Error",
+                // Exponer el inner exception para diagnóstico real
+                string detalle = ex.InnerException?.Message ?? ex.Message;
+                MessageBox.Show($"Error al eliminar producto:\n{detalle}", "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
